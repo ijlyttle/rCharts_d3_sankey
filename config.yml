@@ -1,4 +1,4 @@
-d3_horizon:
+d3_horizon: 
   css: [css/sankey.css]
   jshead: [js/d3.v3.js,js/sankey.js]
   cdn:
