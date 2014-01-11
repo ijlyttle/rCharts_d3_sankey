@@ -15,7 +15,7 @@ var formatNumber = d3.format("0,.0f"),    // zero decimal places
     color = d3.scale.category20();
 
 if(params.labelFormat){
-  formatNumber = d3.format(".3%");
+  formatNumber = d3.format(params.labelFormat);
 }
 
 var svg = d3.select('#' + params.id).append("svg")
