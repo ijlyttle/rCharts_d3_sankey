@@ -2,7 +2,7 @@
 Mike Bostock https://github.com/d3/d3-plugins/tree/master/sankey
 Mike Bostock http://bost.ocks.org/mike/sankey/
 -->
-
+ 
 <script>
 (function(){
 var params = {{{ chartParams }}};
@@ -15,7 +15,7 @@ var formatNumber = d3.format("0,.0f"),    // zero decimal places
     color = d3.scale.category20();
 
 if(params.labelFormat){
-  formatNumber = d3.format(".2%");
+  formatNumber = d3.format(".3%");
 }
 
 var svg = d3.select('#' + params.id).append("svg")
