@@ -26,7 +26,7 @@ var svg = d3.select('#' + params.id).append("svg")
     .attr("width", params.width)
     .attr("height", params.height)
   .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
   .append("text")
     .attr("x", (param.width / 2))             
     .attr("y", (margin.top / 2))
