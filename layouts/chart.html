@@ -25,15 +25,9 @@ var margin = {top: 20, right: 1, bottom: 6, left: 1},
 var svg = d3.select('#' + params.id).append("svg")
     .attr("width", params.width)
     .attr("height", params.height)
-  .append("text")
-    .attr("x", (params.width / 2))
-    .attr("y", (margin.top / 2))
-    .attr("text-anchor", "middle")  
-    .style("font-size", "16px")
-    .text("my brilliant title")
-  .append("g")
+.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-    
+
 var sankey = d3.sankey()
     .nodeWidth(params.nodeWidth)
     .nodePadding(params.nodePadding)
@@ -45,6 +39,14 @@ var path = sankey.link();
 var data = params.data,
     links = [],
     nodes = [];
+
+// try title here
+svg.append("text")
+    .attr("x", (params.width / 2))
+    .attr("y", (margin.top / 2))
+    .attr("text-anchor", "middle")  
+    .style("font-size", "16px")
+    .text("my brilliant title")
     
 //get all source and target into nodes
 //will reduce to unique in the next step
