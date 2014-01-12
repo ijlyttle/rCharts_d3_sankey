@@ -25,14 +25,14 @@ var margin = {top: 20, right: 1, bottom: 6, left: 1},
 var svg = d3.select('#' + params.id).append("svg")
     .attr("width", params.width)
     .attr("height", params.height)
-  .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-  .append("text")
+/*  .append("text")
     .attr("x", (params.width / 2))             
     .attr("y", (margin.top / 2))
     .attr("text-anchor", "middle")  
     .style("font-size", "16px") 
-    .text("my brilliant title");
+    .text("my brilliant title")
+*/  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     
 var sankey = d3.sankey()
     .nodeWidth(params.nodeWidth)
