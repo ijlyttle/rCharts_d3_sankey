@@ -25,7 +25,7 @@ var margin = {top: 1, right: 1, bottom: 6, left: 1},
 var svg = d3.select('#' + params.id).append("svg")
     .attr("width", params.width)
     .attr("height", params.height)
-    .append("g")
+.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     
 var sankey = d3.sankey()
@@ -67,6 +67,14 @@ links.forEach(function (d, i) {
 nodes.forEach(function (d, i) {
     nodes[i] = { "name": d };
 });
+
+//try a title here
+svg.append("text")
+        .attr("x", (param.width / 2))             
+        .attr("y", 0 - (margin.top / 2))
+        .attr("text-anchor", "middle")  
+        .style("font-size", "16px") 
+        .text("my brilliant title");
 
 sankey
   .nodes(nodes)
