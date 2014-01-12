@@ -18,15 +18,21 @@ if(params.labelFormat){
   formatNumber = d3.format(params.labelFormat);
 }
 
+var margin = {top: 1, right: 1, bottom: 6, left: 1},
+    width = params.width - margin.left - margin.right,
+    height = params.height - margin.top - margin.bottom;
+
 var svg = d3.select('#' + params.id).append("svg")
     .attr("width", params.width)
-    .attr("height", params.height);
+    .attr("height", params.height)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     
 var sankey = d3.sankey()
     .nodeWidth(params.nodeWidth)
     .nodePadding(params.nodePadding)
     .layout(params.layout)
-    .size([params.width,params.height]);
+    .size([width,height]);
     
 var path = sankey.link();
     
